@@ -47,11 +47,12 @@ Requires Node.js 20+.
 docker compose up db
 
 # In another terminal — from repo root
-cp .env.example .env
+cp server/.env.example server/.env
 # Create server/.env with:
 # DATABASE_URL=postgresql://planner:planner@localhost:5432/project_planner
 
 npm install
+docker compose up db -d
 npm run db:migrate -w server
 npm run dev
 ```
