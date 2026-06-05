@@ -54,6 +54,7 @@ export function ProjectListPage() {
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                autoComplete="off"
                 className="w-full rounded border border-[var(--color-border)] px-3 py-2 text-sm focus:border-[var(--color-accent)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]"
                 placeholder="My project"
               />
@@ -66,6 +67,7 @@ export function ProjectListPage() {
                 id="desc"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
+                autoComplete="off"
                 rows={2}
                 className="w-full rounded border border-[var(--color-border)] px-3 py-2 text-sm focus:border-[var(--color-accent)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]"
               />

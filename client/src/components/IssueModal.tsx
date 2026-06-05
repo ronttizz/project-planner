@@ -24,7 +24,7 @@ export function IssueModal({
   useEffect(() => {
     setTitle(issue?.title ?? "");
     setDescription(issue?.description ?? "");
-  }, [issue]);
+  }, [issue, isCreating]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -68,6 +68,7 @@ export function IssueModal({
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               autoFocus
+              autoComplete="off"
               className="w-full rounded border border-[var(--color-border)] px-3 py-2 text-sm focus:border-[var(--color-accent)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]"
             />
           </div>
@@ -80,6 +81,7 @@ export function IssueModal({
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               rows={4}
+              autoComplete="off"
               className="w-full rounded border border-[var(--color-border)] px-3 py-2 text-sm focus:border-[var(--color-accent)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]"
             />
           </div>
